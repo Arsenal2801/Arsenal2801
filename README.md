@@ -23,8 +23,6 @@ All of my experience has been self-acquired through working on personal projects
 
 ### Skills
 
-### Skills
-
 - HTML5, CSS3, JavaScript (ES6+)
 - React, React Native, Astro
 - Responsive Web Design
