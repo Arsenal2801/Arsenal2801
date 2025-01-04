@@ -64,29 +64,4 @@ Aplicación web para buscar y mostrar gifs animados.
 
 ---
 
-## 📚 Educación
-
-### CECyT 9 "Juan de Dios Bátiz" - Instituto Politécnico Nacional
-
-**Técnico en Programación** (2019 - 2022)
-
-- Desarrollo Web con JavaScript
-- Diseño de Interfaces de Usuario
-
-### Escuela Superior de Cómputo - Instituto Politécnico Nacional
-
-**Ingeniería en Sistemas Computacionales** (2022 - Presente)
-
-- Desarrollo Web con JavaScript
-- Diseño de Interfaces de Usuario
-
----
-
-## 🌟 Intereses
-
-- Desarrollo Web
-- Diseño de Interfaces
-
----
-
 ¡Gracias por visitar mi perfil! Si tienes alguna pregunta o propuesta de colaboración, no dudes en contactarme. 😊
