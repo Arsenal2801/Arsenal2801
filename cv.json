@@ -1,0 +1,259 @@
+{
+    "basics": {
+      "name": "Salvador Campos Zeron",
+      "label": "Desarrollador Frontend con más de 1 año de experiencia & Entusiasta de la Creación de Interfaces Modernas",
+      "image": "/me.webp",
+      "email": "campos.zeron.salvador28@gmail.com",
+      "phone": "+52 5548499911",
+      "url": "https://salvadorcampos.dev",
+      "summary": "Desarrollador Frontend con más de un año de experiencia creando interfaces de usuario responsivas y dinámicas utilizando tecnologías modernas como React y JavaScript. Apasionado por aprender nuevas herramientas y contribuir a proyectos innovadores.",
+      "location": {
+        "address": "Poza Rica 167, Col. Petrolera, Azcapotzalco",
+        "postalCode": "02480",
+        "city": "Ciudad de México",
+        "countryCode": "MX",
+        "region": "México"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "Arsenal2801",
+          "url": "https://github.com/Arsenal2801"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Promotora Bund SAPI de CV.",
+        "position": "Desarrollador Frontend",
+        "url": "https://bund.mx/",
+        "startDate": "2023-11-17",
+        "endDate": "2024-12-02",
+        "summary": "Diseñé y desarrollé interfaces modernas y funcionales para la plataforma de préstamos personales de Bund, utilizando React, Tailwind CSS, Chakra UI y Redux. Implementé soluciones optimizadas que mejoraron la experiencia del usuario y la eficiencia del desarrollo, contribuyendo al crecimiento y posicionamiento de la empresa en el mercado.",
+        "highlights": [
+          "Started the company"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "CECyT 9 \"Juan de Dios Bátiz\" - Instituto Politécnico Nacional",
+        "url": "https://www.cecyt9.ipn.mx/",
+        "area": "Técnico en Programación",
+        "studyType": "Bachillerato",
+        "startDate": "2019-09-01",
+        "endDate": "2022-06-01",
+        "score": "4.0",
+        "courses": [
+          "Desarrollo Web con JavaScript",
+          "Diseño de Interfaces de Usuario"
+        ]
+      },{
+        "institution": "Escuela Superior de Cómputo - Instituto Politécnico Nacional",
+        "url": "https://www.escom.ipn.mx/",
+        "area": "Ingeniería en Sistemas Computacionales",
+        "studyType": "Licenciatura",
+        "startDate": "2022-09-01",
+        "endDate": null,
+        "score": "4.0",
+        "courses": [
+          "Desarrollo Web con JavaScript",
+          "Diseño de Interfaces de Usuario"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "JavaScript",
+        "level": "Intermedio",
+        "keywords": [
+          "React",
+          "ES6+",
+          "DOM Manipulation"
+        ]
+      },{
+        "name": "TypeScript",
+        "level": "Intermedio",
+        "keywords": [
+          "React",
+          "ES6+",
+          "DOM Manipulation"
+        ]
+      },
+      {
+        "name": "HTML",
+        "level": "Avanzado",
+        "keywords": [
+          "Diseño Responsive",
+          "Flexbox",
+          "Grid"
+        ]
+      },{
+        "name": "CSS",
+        "level": "Avanzado",
+        "keywords": [
+          "Diseño Responsive",
+          "Flexbox",
+          "Grid"
+        ]
+      },
+      {
+        "name": "Git",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }, {
+        "name": "Github",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }, 
+      {
+        "name": "React",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }, 
+      {
+        "name": "Redux",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }, 
+      {
+        "name": "Tailwind CSS",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }, 
+      {
+        "name": "Chakra UI",
+        "level": "Intermedio",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "NodeJS",
+        "level": "Básico",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "Express",
+        "level": "Básico",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "level": "Básico",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "SQL",
+        "level": "Básico",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "Firebase",
+        "level": "Básico",
+        "keywords": [
+          "Git",
+          "GitHub"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Nativo"
+      },
+      {
+        "language": "Inglés",
+        "fluency": "Intermedio"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Desarrollo Web",
+        "keywords": [
+          "JavaScript",
+          "Diseño de Interfaces"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Bund",
+        "isActive": true,
+        "description": "Plataforma de préstamos personales.",
+        "highlights": [
+          "Diseñado con React, Tailwind CSS y Chakra UI",
+          "Integración con APIs para mostrar contenido dinámico"
+        ],
+        "url": "https://bund.mx"
+      },
+      {
+        "name": "Scan-EZ",
+        "isActive": false,
+        "description": "Aplicación web para el control de acceso a un salon de clases.",
+        "highlights": [
+          "Diseñado con HTML, CSS y JavaScript",
+          "Integración con NodeJS, Express y Arduino para el control de acceso"
+        ],
+        "url": "https://salvadorcampos.dev"
+      },
+      {
+        "name": "Journal App",
+        "isActive": true,
+        "description": "Aplicación web para escribir y guardar notas.",
+        "highlights": [
+          "Diseñado con React, Tailwind CSS y Material UI",
+          "Integración con Firebase para almacenar notas"
+        ],
+        "url": "https://journal-app-three-dun.vercel.app"
+      },
+      {
+        "name": "Heroes SPA",
+        "isActive": true,
+        "description": "Aplicación web visualizar un pequeño catalogo de Héroes.",
+        "highlights": [
+          "Diseñado con React, Tailwind CSS"
+        ],
+        "url": "https://heroes-spa-coral.vercel.app"
+      },
+      {
+        "name": "Gif Expert App",
+        "isActive": true,
+        "description": "Aplicación web para buscar y mostrar gifs animados.",
+        "highlights": [
+          "Diseñado con React, Tailwind CSS",
+          "Integración con Giphy API para mostrar gifs"
+        ],
+        "url": "https://react-gift-expert-app.vercel.app"
+      }
+    ]
+  }
+  
