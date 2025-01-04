@@ -37,7 +37,7 @@
     ],
     "education": [
       {
-        "institution": "CECyT 9 \"Juan de Dios Bátiz\" - Instituto Politécnico Nacional",
+        "institution": "CECyT 9 \"Juan de Dios Bátiz\"",
         "url": "https://www.cecyt9.ipn.mx/",
         "area": "Técnico en Programación",
         "studyType": "Bachillerato",
@@ -49,7 +49,7 @@
           "Diseño de Interfaces de Usuario"
         ]
       },{
-        "institution": "Escuela Superior de Cómputo - Instituto Politécnico Nacional",
+        "institution": "Escuela Superior de Cómputo",
         "url": "https://www.escom.ipn.mx/",
         "area": "Ingeniería en Sistemas Computacionales",
         "studyType": "Licenciatura",
@@ -60,7 +60,7 @@
           "Desarrollo Web con JavaScript",
           "Diseño de Interfaces de Usuario"
         ]
-      }
+      },{},{}
     ],
     "skills": [
       {

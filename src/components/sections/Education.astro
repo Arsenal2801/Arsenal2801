@@ -11,7 +11,10 @@ import { education } from "@cv";
         const startYear = new Date(startDate).getFullYear();
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+
+        const years = startDate ? `${startYear} - ${endYear}` : "";
+
+        const title = studyType ? `${studyType} - ${area}` : "";
 
         return (
           <li>
@@ -19,9 +22,7 @@ import { education } from "@cv";
               <header>
                 <div>
                   <h3>{institution}</h3>
-                  <h4>
-                    {studyType} - {area}
-                  </h4>
+                  <h4>{title}</h4>
                 </div>
 
                 <time>{years}</time>
