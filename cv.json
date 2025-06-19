@@ -24,16 +24,6 @@
     },
     "work": [
       {
-        "name": "Promotora Bund SAPI de CV.",
-        "position": "Desarrollador Frontend",
-        "url": "https://bund.mx/",
-        "startDate": "2023-11-17",
-        "endDate": "2024-12-02",
-        "summary": "Diseñé y desarrollé interfaces modernas y funcionales para la plataforma de préstamos personales de Bund, utilizando React, Tailwind CSS, Chakra UI y Redux. Implementé soluciones optimizadas que mejoraron la experiencia del usuario y la eficiencia del desarrollo, contribuyendo al crecimiento y posicionamiento de la empresa en el mercado.",
-        "highlights": [
-          "Started the company"
-        ]
-      },{
         "name": "Grupo ZD",
         "position": "Soporte Tecnico",
         "url": "https://www.grupozd.mx/",
@@ -43,22 +33,21 @@
         "highlights": [
           "Started the company"
         ]
+      },
+      {
+        "name": "Promotora Bund SAPI de CV.",
+        "position": "Desarrollador Frontend",
+        "url": "https://bund.mx/",
+        "startDate": "2023-11-17",
+        "endDate": "2024-12-02",
+        "summary": "Diseñé y desarrollé interfaces modernas y funcionales para la plataforma de préstamos personales de Bund, utilizando React, Tailwind CSS, Chakra UI y Redux. Implementé soluciones optimizadas que mejoraron la experiencia del usuario y la eficiencia del desarrollo, contribuyendo al crecimiento y posicionamiento de la empresa en el mercado.",
+        "highlights": [
+          "Started the company"
+        ]
       }
     ],
     "education": [
       {
-        "institution": "CECyT 9 \"Juan de Dios Bátiz\"",
-        "url": "https://www.cecyt9.ipn.mx/",
-        "area": "Técnico en Programación",
-        "studyType": "Bachillerato",
-        "startDate": "2019-09-01",
-        "endDate": "2022-06-01",
-        "score": "4.0",
-        "courses": [
-          "Desarrollo Web con JavaScript",
-          "Diseño de Interfaces de Usuario"
-        ]
-      },{
         "institution": "Escuela Superior de Cómputo",
         "url": "https://www.escom.ipn.mx/",
         "area": "Ingeniería en Sistemas Computacionales",
@@ -70,7 +59,19 @@
           "Desarrollo Web con JavaScript",
           "Diseño de Interfaces de Usuario"
         ]
-      },{},{}
+      },{
+        "institution": "CECyT 9 \"Juan de Dios Bátiz\"",
+        "url": "https://www.cecyt9.ipn.mx/",
+        "area": "Técnico en Programación",
+        "studyType": "Bachillerato",
+        "startDate": "2019-09-01",
+        "endDate": "2022-06-01",
+        "score": "4.0",
+        "courses": [
+          "Desarrollo Web con JavaScript",
+          "Diseño de Interfaces de Usuario"
+        ]
+      }
     ],
     "skills": [
       {
