@@ -1,29 +1,36 @@
 ---
-import { work } from "@cv";
+import Section from "../Section.astro";
+import { work } from "@/data/cv";
 
-import Section from "@/components/Section.astro";
+function formatDate(date) {
+  if (!date) return "Actual";
+  return new Date(date).toLocaleDateString("es-MX", {
+    year: "numeric",
+    month: "short",
+  });
+}
 ---
 
 <Section title="Experiencia Laboral">
   <ul>
     {
-      work.map(({ summary, position, name, startDate, endDate, url }) => {
-        const startYear = new Date(startDate).getFullYear();
-        const endYear = endDate ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+      work.map((w) => {
+        const years = `${formatDate(w.startDate)} - ${formatDate(w.endDate)}`;
         return (
           <li>
             <article>
               <header>
                 <div>
-                  <h3>{name}</h3>
-                  <h4>{position}</h4>
+                  <h3>
+                    <a href={w.url} target="_blank">
+                      {w.name}
+                    </a>
+                  </h3>
+                  <h4>{w.position}</h4>
                 </div>
                 <time>{years}</time>
               </header>
-              <footer>
-                <p>{summary}</p>
-              </footer>
+              <p>{w.summary}</p>
             </article>
           </li>
         );
@@ -36,28 +43,34 @@ import Section from "@/components/Section.astro";
   ul {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 2rem;
   }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
+  h3 {
+    font-weight: 600;
+    color: #b87333;
+    font-size: 1.1rem;
   }
-
-  article h4 {
+  h3 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h4 {
     font-weight: 400;
-    color: #222;
+    color: #ccc;
+    font-size: 0.95rem;
   }
-
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
   }
-
   time {
     font-size: 0.85rem;
-    color: #555;
+    color: #999;
+  }
+  p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
   }
 </style>

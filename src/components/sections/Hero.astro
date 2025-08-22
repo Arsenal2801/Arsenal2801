@@ -1,150 +1,233 @@
 ---
-import { basics } from "@cv";
+import { basics } from "@/data/cv";
+import GitHub from "../icons/GitHub.astro";
+import Mail from "../icons/Mail.astro";
+import Phone from "../icons/Phone.astro";
+import WorldMap from "../icons/WorldMap.astro";
 
-import GitHub from "@/components/icons/GitHub.astro";
-import LinkedIn from "@/components/icons/LinkedIn.astro";
-import Mail from "@/components/icons/Mail.astro";
-import Phone from "@/components/icons/Phone.astro";
-import Section from "@/components/Section.astro";
-import WorldMap from "@/components/icons/WorldMap.astro";
-import X from "@/components/icons/X.astro";
-
-const { name, label, image, location, profiles, phone, email } = basics;
+const SOCIAL_ICONS = { GitHub };
+const { name, label, image, location, email, phone, profiles } = basics;
 const { city, region } = location;
-const SOCIAL_ICONS: Record<string, any> = {
-  GitHub,
-  LinkedIn,
-  X,
-};
 ---
 
-<Section>
-  <div class="container">
-    <div class="info">
-      <h1>
-        {name}
-      </h1>
-      <h2>
-        {label}
-      </h2>
-      <span>
-        <WorldMap />
-        {city}, {region}
-      </span>
-      <footer class="print">
-        {email} &bull; {phone}
-      </footer>
-      <footer class="no-print">
-        {
-          email && (
-            <a
-              href={`mailto:${email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`Enviar un correo a ${name}`}
-            >
-              <Mail />
+<section class="hero">
+  <figure>
+    <img src={image} alt={name} />
+  </figure>
+  <div class="info">
+    <h1>{name}</h1>
+    <h2>{label}</h2>
+    <span><WorldMap /> {city}, {region}</span>
+
+    <!-- Íconos normales -->
+    <div class="contacts">
+      {
+        email && (
+          <a href={`mailto:${email}`}>
+            <Mail />
+          </a>
+        )
+      }
+      {
+        phone && (
+          <a href={`tel:${phone}`}>
+            <Phone />
+          </a>
+        )
+      }
+      {
+        profiles.map((p) => {
+          const Icon = SOCIAL_ICONS[p.network];
+          return (
+            <a href={p.url} target="_blank">
+              <Icon />
             </a>
-          )
-        }{
-          phone && (
-            <a
-              href={`tel:${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`Llamar a ${name}`}
-            >
-              <Phone />
-            </a>
-          )
-        }
-        {
-          profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network];
-            return (
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={`Visitar el perfil de ${name} en ${network}`}
-              >
-                <Icon />
-              </a>
-            );
-          })
-        }
-      </footer>
+          );
+        })
+      }
     </div>
-    <figure>
-      <img src={image} alt={name} />
-    </figure>
+
+    <!-- Datos visibles solo al imprimir -->
+    <div class="print-data">
+      {
+        email && (
+          <p>
+            <strong>Email:</strong> {email}
+          </p>
+        )
+      }
+      {
+        phone && (
+          <p>
+            <strong>Teléfono:</strong> {phone}
+          </p>
+        )
+      }
+      {
+        profiles.map((p) => (
+          <p>
+            <strong>{p.network}:</strong> {p.url}
+          </p>
+        ))
+      }
+    </div>
   </div>
-</Section>
+</section>
 
 <style>
-  .container {
+  .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  figure {
+    flex-shrink: 0;
+  }
+
+  figure img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #a97142;
+    object-fit: cover;
+    box-shadow: 0 8px 24px #a97142;
+    transition: 0.3s;
+  }
+
+  figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px #a97142;
   }
 
   .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
+    flex: 1;
+    max-width: 600px;
+    color: #f0f0f0;
+    text-align: left;
+    line-height: 1.6;
   }
 
-  h1 {
-    font-size: 2rem;
+  .info h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #a97142;
+    text-shadow: 2px 2px 8px rgba(169, 113, 66, 0.6);
   }
 
-  h2 {
-    color #444;
-    font-size: 1.1rem;
+  .info h2 {
+    font-size: 1.2rem;
+    color: #f0f0f0;
     font-weight: 500;
-    text-wrap: balance;
-  }
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 6px;
-    width: 128px;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
   }
 
-  span {
-    color: #666;
+  .info span {
+    color: #ccc;
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    letter-spacing: -0.05rem;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
   }
 
-  footer {
-    font-size: 0.75rem;
-    color: #555;
+  .contacts {
     display: flex;
-    gap: 4px;
-    margin-top: 8px;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
   }
 
-  footer a {
-    color: #777;
-    display: inline-flex;
+  .contacts a {
+    display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ddd;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    border-radius: 4px;
-    transition: all .3s ease;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    color: #a97142;
+    border: 1px solid #a97142;
+    transition: all 0.3s ease;
   }
 
-  footer a:hover {
-    background-color: #eee;
+  .contacts a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px #a97142);
   }
 
+  .print-data {
+    display: none;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #000;
+  }
+
+  /* --- TABLETS --- */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 3rem 1.5rem;
+      flex-direction: column;
+      text-align: center;
+    }
+    .info {
+      text-align: center;
+    }
+    .info span {
+      justify-content: center;
+    }
+    .contacts {
+      justify-content: center;
+    }
+  }
+
+  /* --- MOBILE --- */
+  @media (max-width: 600px) {
+    .info h1 {
+      font-size: 2rem;
+    }
+    .info h2 {
+      font-size: 1rem;
+    }
+    figure img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  /* --- PRINT MODE --- */
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    figure img {
+      border: 2px solid #000;
+      box-shadow: none;
+    }
+
+    .contacts {
+      display: none !important;
+    }
+
+    .print-data {
+      display: block !important;
+    }
+
+    .info h1,
+    .info h2,
+    .info span {
+      color: #000 !important;
+      text-shadow: none !important;
+    }
+  }
 </style>

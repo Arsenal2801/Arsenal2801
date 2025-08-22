@@ -8,7 +8,6 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
@@ -17,20 +16,39 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-  html {
-    font-family: Menlo, Monaco, Lucida, Console, "Courier New", monospace;
-    background-color: #fff;
-    letter-spacing: -0.025rem;
-  }
-
-  body,
-  figure {
+  html,
+  body {
     margin: 0;
     padding: 0;
+    font-family: Menlo, Monaco, Lucida, Console, "Courier New", monospace;
+    letter-spacing: -0.025rem;
+    min-height: 100vh;
+    color: #f0f0f0;
+    background: linear-gradient(
+      135deg,
+      #0d0d0d 0%,
+      #1b263b 40%,
+      #2e3a59 70%,
+      #2e4053 100%
+    );
+    background-attachment: fixed;
+    transition:
+      background 0.5s,
+      color 0.3s;
   }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   a {
     text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
   }
+
   ul {
     list-style: none;
     padding: 0;
@@ -65,21 +83,85 @@ const { title } = Astro.props;
   }
 
   p {
-    color: #666;
-    text-wrap: pretty;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f0f0f0;
     margin: 0;
   }
-  .print {
-    display: none !important;
-  }
+  /* ===============================
+   PRINT MODE - CV ASTRO
+   =============================== */
   @media print {
-    .print {
-      display: block !important;
+    /* Reset básico */
+    * {
+      color: #000 !important; /* Todo en negro para máxima legibilidad */
+      background: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
     }
-    .no-print {
+
+    body {
+      margin: 0;
+      padding: 1cm;
+      font-size: 12pt;
+      line-height: 1.5;
+    }
+
+    /* Quitar headers/footers del navegador */
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+
+    /* Mostrar todo lo que pudiera estar oculto */
+    [style*="display:none"],
+    [hidden],
+    .hidden {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    /* Eliminar navegación, botones o cosas innecesarias */
+    nav,
+    .no-print,
+    button,
+    .astro-dev-toolbar {
       display: none !important;
+    }
+
+    /* Ajustar títulos */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+
+    /* Secciones del CV */
+    section {
+      page-break-inside: avoid;
+      margin-bottom: 1cm;
+    }
+
+    /* Imágenes */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+      page-break-inside: avoid;
+    }
+
+    /* Enlaces se muestran como texto normal */
+    a {
+      text-decoration: none;
+      color: inherit !important;
+    }
+
+    /* Opcional: mostrar la URL junto al enlace */
+    a::after {
+      content: " (" attr(href) ")";
+      font-size: 10pt;
     }
   }
 </style>
